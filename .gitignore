@@ -1,0 +1,19 @@
+
+*.png
+*.json
+*.txt
+*.npy
+Easy Train 0_5_10 Margin Easy Val Dropout Jitter
+Hard Train 0_5_10 Margin Easy Val Dropout Jitter
+data/train/hard/601_E_23rd_St,_Los_Angeles,_CA_90011,_USA/.DS_Store
+data/train/easy/4950_Santa_Monica_Blvd,_Los_Angeles,_CA_90029,_USA/.DS_Store
+data/train/easy/402_N_Soto_St,_Los_Angeles,_CA_90033,_USA/.DS_Store
+data/test/easy/2701_Newell_St,_Los_Angeles,_CA_90039,_USA/.DS_Store
+data/test/easy/545_N_Commonwealth_Ave,_Los_Angeles,_CA_90004,_USA/.DS_Store
+data/test/easy/550_S_Mission_Rd,_Los_Angeles,_CA_90033,_USA/.DS_Store
+data/test/easy/6115_Fallbrook_Ave,_Woodland_Hills,_CA_91367,_USA/.DS_Store
+data/test/.DS_Store
+data/test/hard/.DS_Store
+data/train/.DS_Store
+data/train/hard/.DS_Store
+data/noreroof/.DS_Store
