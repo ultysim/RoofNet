@@ -3,6 +3,7 @@ import torch
 from datetime import datetime
 from torch.utils.data import Dataset
 from torch.utils.data.sampler import Sampler
+from PIL import Image
 
 def str_to_date(s):
     return datetime.strptime(s, '%m/%d/%Y')
@@ -26,12 +27,12 @@ class ImageDataset(Dataset):
     """
 
     def __init__(self, 
-                file_path, 
+                file_path,
                 transform=None):
         print('Loading data')
         data_dict = np.load(file_path, allow_pickle=True)
         data_dict = data_dict.item().get('data')
-        
+
         self.data = []
         self.data_dict = data_dict
 
@@ -50,13 +51,6 @@ class ImageDataset(Dataset):
                         sorted_v[key].append(v[key][i])
                     else:
                         sorted_v[key].append(v[key])
-                    #except:
-                        #print(v['address'])
-                        #print(key)
-                        #print(i)
-                        #print(v[key])
-                        #print("--------------")
-
                     
             for i in range(m):
                 if v['trans_year'] != 0:
@@ -94,7 +88,7 @@ class ImageDataset(Dataset):
  
     def __getitem__(self, index): 
         img, year, transition_year,name = self.data[index]
-     
+
         if self.transform is not None:
             img = self.transform(img)
 
