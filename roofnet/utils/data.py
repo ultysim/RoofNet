@@ -38,27 +38,30 @@ class ImageDataset(Dataset):
 
             
         for k,v in data_dict.items():
-            if type(v['expiration']) == str and type(v['issue']) == str:
-                pass
-            else:
-                continue
+            #if type(v['expiration']) == str and type(v['issue']) == str:
+            #    pass
+            #else:
+            #    continue
             m = len(v['years'])
             sorted_args = np.argsort(v['years'])
             sorted_v = {key:[] for key in v.keys()}
             for i in sorted_args:
                 for key in sorted_v.keys():
+                    if key == 'expiration' or key == 'issue':
+                        continue
                     if key != 'trans_year':
                         sorted_v[key].append(v[key][i])
                     else:
                         sorted_v[key].append(v[key])
                     
             for i in range(m):
-                if v['trans_year'] != 0:
-                    transition_year = v['trans_year']
-                else:
-                    issue = str_to_date(v['issue'])
-                    expiration = str_to_date(v['expiration'])
-                    transition_year = get_transition_year(issue,expiration)
+                transition_year = v['trans_year']
+                #if v['trans_year'] != 0:
+                #    transition_year = v['trans_year']
+                #else:
+                #    issue = str_to_date(v['issue'])
+                #    expiration = str_to_date(v['expiration'])
+                #    transition_year = get_transition_year(issue,expiration)
 
                 self.data.append((sorted_v['imgs'][i],sorted_v['years'][i],transition_year,v['address']))
             

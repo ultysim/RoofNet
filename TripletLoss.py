@@ -192,6 +192,7 @@ class Model(nn.Module):
         data_array = make_data_array(data)
         self.model.eval()
         out = []
+        meta = []
         for location in data_array:
             hold = []
             for year in location['img']:
@@ -200,4 +201,5 @@ class Model(nn.Module):
                 output[output != output] = 0
                 hold.append(output.detach().cpu().numpy().reshape(-1))
             out.append(np.array(hold))
-        return np.array(out)
+            meta.append(location['meta'][0])
+        return np.array(out), np.array(meta)
