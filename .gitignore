@@ -17,3 +17,4 @@ data/test/hard/.DS_Store
 data/train/.DS_Store
 data/train/hard/.DS_Store
 data/noreroof/.DS_Store
+*.csv
