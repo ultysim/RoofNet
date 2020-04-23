@@ -21,3 +21,5 @@ data/noreroof/.DS_Store
 *.csv
 data/test/2701_Newell_St,_Los_Angeles,_CA_90039,_USA/.DS_Store
 *.pth
+.idea
+.ipynb_checkpoints
