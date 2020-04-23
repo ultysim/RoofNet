@@ -3,6 +3,7 @@
 *.json
 *.txt
 *.npy
+*.DS_Store
 Easy Train 0_5_10 Margin Easy Val Dropout Jitter
 Hard Train 0_5_10 Margin Easy Val Dropout Jitter
 data/train/hard/601_E_23rd_St,_Los_Angeles,_CA_90011,_USA/.DS_Store
@@ -18,3 +19,5 @@ data/train/.DS_Store
 data/train/hard/.DS_Store
 data/noreroof/.DS_Store
 *.csv
+data/test/2701_Newell_St,_Los_Angeles,_CA_90039,_USA/.DS_Store
+*.pth
