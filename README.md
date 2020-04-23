@@ -1,7 +1,6 @@
 # RoofNet
-Deep Learning project to identify roof age
+Deep learning project to identify roof age using historical satellite images to lower the customer acquisition cost for new solar installations. 
 
 Project in conjuction with Misha Laskin, Chris Heinrich, and Evert P.L. van Nieuwenburg
 
-Originally designed to be sumbitted to NeurIPS 2019 Workshop
-Tackling Climate Change with Machine Learning
+Paper available: https://arxiv.org/abs/2001.04227
